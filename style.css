@@ -142,7 +142,12 @@ body {
 	color: #555;
 	font-family: 'Lato', sans-serif;
 }
-
+.camp{
+     line-height: 1.5;
+	 color: #FFF;
+	 font-size: 28px !important;
+	 font-family: 'Lato', sans-serif;
+}
 a {
 	text-decoration: none !important;
 	color: #8cc63f;
@@ -168,8 +173,16 @@ h3,
 h4,
 h5,
 h6 {
-	color: #fff;
-	font-weight: 600;
+	color: #84e80f;
+	font-weight: 900;
+	line-height: 1.5;
+	margin: 0 0 30px 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+.team-mate {
+	color: #000;
+	font-weight: 900;
 	line-height: 1.5;
 	margin: 0 0 30px 0;
 	font-family: 'Raleway', sans-serif;
@@ -1129,9 +1142,9 @@ body.stretched #header.full-header .container {
 	display: block;
 	line-height: 22px;
 	padding: 39px 15px;
-	color: #444;
+	color: #040606fa;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 22px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-family: 'Raleway', sans-serif;
@@ -1158,7 +1171,7 @@ body.stretched #header.full-header .container {
 }
 
 #primary-menu ul li:hover > a,
-#primary-menu ul li.current > a { color: #589a00; }
+#primary-menu ul li.current > a { color: #4028c3fa; }
 
 #primary-menu > ul > li.sub-menu > a > div { }
 
@@ -9874,7 +9887,7 @@ body:not(.device-touch) .clients-grid li a {
 
 .team-title span {
 	display: block;
-	color: #8cc63f;
+	color: #1714d8;
 	font-weight: 400;
 	font-family: 'Crete Round', serif;
 	font-style: italic;
@@ -11153,10 +11166,10 @@ input[type=checkbox]:not(:checked) + label.error { display: block !important; }
 .emphasis-title h1,
 .emphasis-title h2 {
 	margin-bottom: 0;
-	font-weight: 700;
+	font-weight: 1000;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #fff;
+	color: #84e80f;
 }
 
 .emphasis-title h1,
@@ -11232,7 +11245,7 @@ input[type=checkbox]:not(:checked) + label.error { display: block !important; }
 
 .emphasis-title h1,
 .emphasis-title h2 {
-	font-size: 64px;
+	font-size: 48px;
 	letter-spacing: -2px;
 }
 
