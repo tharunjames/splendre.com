@@ -4290,7 +4290,9 @@ body.stretched .container-fullwidth .breadcrumb {
 #content p.let {
 	font-size:24px;
 }
-
+p.let {
+	font-size:24px;
+}
 .content-wrap {
 	position: relative;
 	padding: 80px 0;
