@@ -336,7 +336,7 @@
 
 	#logo {
 		display: block;
-		height: 100px;
+
 		float: none;
 		margin: 0 auto 0 !important;
 		max-width: none;
@@ -355,7 +355,7 @@
 	#primary-menu-trigger {
 		opacity: 1;
 		pointer-events: auto;
-		top: 25px;
+		top: 2px;
 		margin-top: 0;
 		left: 0;
 		z-index: 1;
@@ -1108,7 +1108,7 @@
 	body { padding: 0 !important; }
 
 	#wrapper { width: 100% !important; }
-
+	#logo img{max-width:160px;}
 	.container-fullwidth {
 		margin: 0 auto;
 		padding: 0 15px !important;
