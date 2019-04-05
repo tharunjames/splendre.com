@@ -9035,6 +9035,15 @@ body:not(.device-touch) .button.button-full strong {
 	margin-bottom: 0;
 	color: #333;
 }
+.fbox {
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+	color: #7ad016 !important ;
+}
+
 
 .feature-box p {
 	margin: 8px 0 0 0;
@@ -14678,7 +14687,7 @@ button.toast-close-button {
 
 .footer-logo {
 	display: block;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 
@@ -16551,6 +16560,7 @@ body:not(.no-transition) #wrapper,
 
 .live-logo {
 	width: 100px;
+	margin-bottom: 20px;
 }
 
 .mb-10 {
@@ -16558,7 +16568,8 @@ body:not(.no-transition) #wrapper,
 }
 
 .mt-0 {
-	margin-top: 0 !important
+	margin-top: 0 !important;
+	line-height:1.5 !important;
 }
 .team-wrapper{
 	margin: -10px; margin-right: -10px;
@@ -16567,6 +16578,11 @@ body:not(.no-transition) #wrapper,
 }
 .team-wrapper .team{  display: flex;
 	flex-direction: column; width:25%; padding: 10px; }
+
+	abbr[title] {
+		border-bottom: none !important;
+		cursor: default !important;
+	  }
 @media screen and (max-width:1366px) {
 	h4.sp-title {
 		font-size: 22px
