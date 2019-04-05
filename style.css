@@ -14955,9 +14955,11 @@ body:not(.device-touch) .tagcloud a {
 -----------------------------------------------------------------*/
 
 .subscribe-widget h5 {
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.5;
+	color:#ccc !important;
+	font-family:'Lato', sans-serif !important;
 }
 
 
@@ -16608,4 +16610,10 @@ body:not(.no-transition) #wrapper,
 }
 @media screen and (max-width:479px) {
 	.team-wrapper .team{width:100%;}
+}
+.mb-0{
+margin-bottom:0 !important;
+}
+.mb-10{
+margin-bottom:10px!important;
 }
