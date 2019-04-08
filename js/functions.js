@@ -3198,6 +3198,11 @@ var SEMICOLON = SEMICOLON || {};
 
 				element.find('form').validate({
 					submitHandler: function(form) {
+						var response = grecaptcha.getResponse();
+						if (response.length === 0) {
+							alert("Please validate captcha!!");
+							return false;
+						} 
 
 						elementResult.hide();
 
@@ -3213,7 +3218,9 @@ var SEMICOLON = SEMICOLON || {};
 						$(form).ajaxSubmit({
 							target: elementResult,
 							dataType: 'json',
+							error:function(data){console.log("Error");},
 							success: function( data ) {
+								
 								if( elementLoader == 'button' ) {
 									defButton.html( defButtonText );
 								} else {
