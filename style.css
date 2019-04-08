@@ -149,7 +149,7 @@ li {
 body {
 	line-height: 1.5;
 	color: #555;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato', sans-serif !important;
 }
 
 .camp {
@@ -194,9 +194,9 @@ h5,
 h6 {
 	color: #84e80f;
 	font-weight: 900;
-	line-height: 1.5;
+	line-height: 1.5 !important;
 	margin: 0 0 30px 0;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 .head_1 {
@@ -1596,7 +1596,7 @@ body.stretched #header.full-header .container {
 
 #primary-menu ul li:hover>a,
 #primary-menu ul li.current>a {
-	color: #84e80f;
+	color: #84e80f !important;
 }
 
 #primary-menu>ul>li.sub-menu>a>div {}
