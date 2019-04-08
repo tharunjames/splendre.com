@@ -9,7 +9,7 @@
 .dark h3,
 .dark h4,
 .dark h5,
-.dark h6 { color: #EEE; }
+.dark h6 { color: #CCC; }
 
 .dark a:hover { color: #EEE; }
 
@@ -1031,7 +1031,7 @@ body.top-search-open .dark #header-wrap:not(.not-dark) #top-search a,
 #footer.dark,
 .dark #footer {
 	background-color: #333;
-	color: #CCC;
+	color: #CCC !important;
 	border-top-color: rgba(0,0,0,0.2);
 }
 
@@ -1068,7 +1068,7 @@ body #side-panel.dark #side-panel-trigger-close a {
 	color: #FFF;
 }
 
-.dark .widget h4 { color: #DDD; }
+.dark .widget h4 { color: #CCC; }
 
 .dark .widget p { opacity: 0.8; }
 
@@ -1742,7 +1742,7 @@ body #side-panel.dark #side-panel-trigger-close a {
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a,
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a,
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a,
-	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a { color: #1ABC9C !important; }
+	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a { color: #84e80f !important; }
 
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul ul a,
 	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover ul a,
