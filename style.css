@@ -16585,6 +16585,176 @@ body:not(.no-transition) #wrapper,
 		border-bottom: none !important;
 		cursor: default !important;
 	  }
+
+	  .job-details {
+		display: none;
+		background: #fff;
+	}
+	.job-details {
+		border: 1px solid #eee;
+		padding: 20px;
+		margin-bottom: 30px;
+		border-bottom: 3px solid #8cc63f;
+	}
+	.job-lists {
+		box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
+		margin-bottom: 20px;
+		border-left: 5px solid #8CC63F;
+		border-radius: 3px;
+	}
+	.location-name {
+		padding: 31px 0;
+			padding-left: 0px;
+		font-size: 16px;
+		float: left;
+		position: relative;
+		padding-left: 35px;
+		background: url(images/location.svg) no-repeat left center;
+		background-size: 24px ; 
+	}
+
+	.view-details {
+		border: 0;
+		background: #fff;
+		color: #333;
+		padding: 5px 0px;
+		text-align: center;
+		width: 40px;
+		height: 40px;
+		float: right;
+		margin: 24px 20px 15px 0px;
+		font-size: 32px;
+		line-height: 30px;
+		position: relative;
+	}
+	.job-details p {
+		margin-bottom: 5px;
+	}
+	.tech-icon {
+		float: left;
+		width: 85px;
+		height: 85px;
+		padding: 20px;
+	}
+	.job-name {
+		float: left;
+		padding: 30px 0;
+	}
+	.view-details:after {
+		position: absolute;
+		content: '+';
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		height: 40px;
+		line-height: 40px;
+		-webkit-transition: all .5s ease-in-out;
+		-moz-transition: all .5s ease-in-out;
+		-o-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
+	}
+	.register-form .modal-container {
+		background: #fff none repeat scroll 0 0;
+		left: 0;
+		margin: 55px auto;
+		max-width:600px;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: 50px;
+		width: 100%;
+		z-index: 9999;
+	}
+	#career-form .form-control, #contact-form .form-control {
+		height: 42px;
+		padding: 11px 12px;
+		background: #e6e6e6;
+color: #555;
+border-radius: 0;
+border: 0;
+	}
+	#career-form {
+		padding: 25px 30px 0;
+		margin-bottom: 10px;
+	}
+	#career-form .modal-footer{padding: 15px 0;}
+	.modal-title {color:#212121;}
+	.contact-send {
+		background: #8cc63f;
+		text-transform: uppercase;
+		color: #fff;
+		padding: 10px 50px;
+		border: 0;
+		font-weight: 600;
+	}
+	.upload-col {
+		position: relative;
+	}
+	.upload-btn {
+		float: left;
+		padding:  18px;
+		color: #fff;
+		background: #333;
+		position: relative;
+		height:100%;
+		box-sizing: border-box;
+		cursor: pointer;
+		margin-bottom: 0;
+		position: absolute;
+		left:0; top:0;
+	}
+	label {
+		display: inline-block;
+		max-width: 100%;
+		font-weight: 700;
+	}
+
+	.fake-input {
+		padding: 14px 18px 14px 120px;
+		outline: none;
+		font-size: 15px;
+		color: #909090;
+		margin: 0;
+		max-width: 100%;
+		width: 100%;
+		box-sizing: border-box;
+		display: block;
+		background-color: #E6E6E6;
+		font-weight: 500;
+		border: 1px solid #e0e0e0;
+		opacity: 1;
+
+	}
+	label.upload-btn input[type="file"] {
+		display: none;
+	}
+	.apply-now {
+		background: #8CC63F;
+		color: #fff;
+		padding: 5px 15px;
+		margin: 10px 0;
+		border: 0;
+	}
+	.job-details ul{margin-left: 30px;}
+	.job-details li{padding-left: 15px; line-height: 1.6; font-size:16px;}
+	.gutter-30{height:30px;}
+	.gutter-20{height:20px;}
+
+	.view-details.xpand:after {
+		position: absolute;
+		content: '-';
+		left: 0;
+		right: 0;
+		top: -2px;
+		bottom: 0;
+		height: 40px;
+		line-height: 40px;
+		-webkit-transition: all .5s ease-in-out;
+		-moz-transition: all .5s ease-in-out;
+		-o-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
+	}
 @media screen and (max-width:1366px) {
 	h4.sp-title {
 		font-size: 22px
@@ -16607,6 +16777,40 @@ body:not(.no-transition) #wrapper,
 }
 @media screen and (max-width:767px) {
 	.team-wrapper .team{width:50%;}
+}
+@media screen and (max-width:599px) {
+.job-lists .col-xs-6 {
+    width: 100%;
+}
+.tech-icon img {
+    width: 30px;
+}
+.tech-icon {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+}
+.job-name {
+    padding: 20px 0 15px;
+	margin-left: 0;
+	width: calc(100% - 50px);
+}
+.location-name {
+ 
+    background-position: left 15px center;
+   
+}
+.view-details {
+    float: none;
+    margin: 0 auto 15px;
+    display: table;
+}
+.location-name {
+    padding: 0px 0 0 50px;
+    margin-top: 10px;
+    width: calc(100% - 60px);
+}
 }
 @media screen and (max-width:479px) {
 	.team-wrapper .team{width:100%;}
