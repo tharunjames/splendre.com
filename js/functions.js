@@ -4509,6 +4509,7 @@ jQuery(document).ready(function ($) {
 		var action = $(This).attr('action');
 		var form = $('form[name="career"]'); // You need to use standard javascript object here
 		var formdata = new FormData(form[0]);
+		formdata.append( 'subject', "Job application" );
 
 		if ($(this).valid()) {
 			$.ajax({
