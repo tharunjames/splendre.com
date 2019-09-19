@@ -377,7 +377,7 @@
 
 				</div>
 				<form class="contact-form apply-job clearfix" name="career" id="career-form" method="post"
-					enctype="multipart/form-data" action="send-mail">
+					enctype="multipart/form-data" action="https://us-central1-splendre-adn-poc.cloudfunctions.net/mailattach">
 					<p><input name="name" type="text" class="form-control career-form" id="name" placeholder="Name*"
 							required></p>
 					<p><input name="phone" type="tel" class="form-control career-form" id="phone" placeholder="Phone*"
@@ -394,7 +394,7 @@
 						<span class="fake-input">No file selected</span>
 					</div>
 					<div class="form-group">
-						<div class="g-recaptcha"></div>
+						<div id="CareerCaptcha"></div>
 					</div>
 					<div id="response_msg"></div>
 					<div class="modal-footer">
@@ -421,7 +421,7 @@
 							<div class="contact-form-result"></div>
 
 							<form class="nobottommargin" id="template-contactform" name="template-contactform"
-								action="https://us-central1-splendre-adn-poc.cloudfunctions.net/reqtest" method="post">
+								action="https://us-central1-splendre-adn-poc.cloudfunctions.net/mailattach" method="post">
 
 								<div class="form-process"></div>
 
@@ -465,7 +465,7 @@
 									<input type="text" id="template-contactform-botcheck"
 										name="template-contactform-botcheck" value="" class="sm-form-control" />
 								</div>
-								<div class="g-recaptcha" data-sitekey="6Lfk7JwUAAAAAKz-WqP7BrWjK7vExnCOfUr_Nxtd"></div>
+								<div id="ContactCaptcha"></div>
 								<br />
 
 
@@ -638,7 +638,8 @@
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<!-- Recaptcha initialization callback func (onloadCaptchaCallback) is defined in function.js -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCaptchaCallback&render=explicit" async defer></script>
 
 </body>
 

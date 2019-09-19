@@ -1,5 +1,22 @@
 var $ = jQuery.noConflict();
 
+//////////////////////////////////////////////////////////////
+// Manual rendering to enable multiple reCaptchas on same page
+var recaptchaContact;
+var recaptchaCareer;
+var onloadCaptchaCallback = function() {
+  // Renders the HTML element with id 'ContactCaptcha' as a reCAPTCHA widget.
+  // The id of the reCAPTCHA widget is assigned to 'recaptchaContact'.
+  recaptchaContact = grecaptcha.render('ContactCaptcha', {
+	'sitekey' : '6Lfk7JwUAAAAAKz-WqP7BrWjK7vExnCOfUr_Nxtd',
+	//'theme' : 'dark'
+  });
+  recaptchaCareer = grecaptcha.render(document.getElementById('CareerCaptcha'), {
+	'sitekey' : '6Lfk7JwUAAAAAKz-WqP7BrWjK7vExnCOfUr_Nxtd'
+  });
+};
+//////////////////////////////////////////////////////////////
+
 $.fn.inlineStyle = function (prop) {
 	return this.prop("style")[$.camelCase(prop)];
 };
@@ -3911,7 +3928,7 @@ var SEMICOLON = SEMICOLON || {};
 
 				element.find('form').validate({
 					submitHandler: function (form) {
-						var response = grecaptcha.getResponse();
+						var response = grecaptcha.getResponse(recaptchaContact);
 						if (response.length === 0) {
 							alert("Please validate captcha!!");
 							return false;
@@ -4509,6 +4526,7 @@ jQuery(document).ready(function ($) {
 		var action = $(This).attr('action');
 		var form = $('form[name="career"]'); // You need to use standard javascript object here
 		var formdata = new FormData(form[0]);
+		formdata.append( 'subject', "Job application" );
 
 		if ($(this).valid()) {
 			$.ajax({
