@@ -4495,17 +4495,29 @@ var SEMICOLON = SEMICOLON || {};
 })(jQuery);
 
 jQuery(document).ready(function ($) {
-	$('.view-details').click(function () {
-		var link = $(this);
-		$(this).each(function () {
-			$(this).parents('.job-lists').next().slideToggle('slow', function () {
-				if ($(this).is(':visible')) {
-					link.addClass('xpand');
-				} else {
-					link.removeClass('xpand');
-				}
-			});
+
+	function expand_detail_to_view(){
+		var job_wrapper = $(location.hash);
+		var xpand_btn = job_wrapper.find(".view-details");
+		var detail_view = job_wrapper.find(".job-details");
+
+		$('html, body').animate({ scrollTop: job_wrapper.offset().top-100 }, 'slow');
+		job_wrapper.children(".job-details").slideToggle('slow', function (){
+			if (detail_view.is(':visible')) {
+				xpand_btn.addClass('xpand');
+			} else {
+				xpand_btn.removeClass('xpand');
+			}
 		});
+	}
+
+	if (location.hash != "" && $(location.hash).length > 0 ){
+		expand_detail_to_view();
+	}
+
+	$('.view-details').click(function () {
+		location.hash=$(this).parents('.job-wrapper').attr('id')
+		expand_detail_to_view();
 	});
 
 
