@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Rahul" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Lookodu Coupon Verification</title>
+	<style type="text/css">
+		body {
+			zoom: normal;
+		}
+		.content {
+		  position: absolute;
+		  top: 50%;
+		  left:50%;
+		  transform: translate(-50%,-50%);
+		  }
+		.form-container {
+			padding: 1em;
+		}
+		.alert {
+			margin-top: 1em;
+		}
+	</style>
+
+</head>
+
+<body>
+	<section class="container">
+		<div class="row ">
+			<div class="col-md-12">
+				<div class="page-header">
+				  <h1>Lookodu <small>Coupon Claim</small></h1>
+				</div>
+				<div class="panel panel-default form-container">
+					<h4>Enter coupon code to claim</h4>
+					<form id="couponForm">
+					  <div class="form-group">
+					    <label for="couponCode">Coupon Code</label>
+					    <input type="text" class="form-control" id="couponCode" placeholder="Coupon" maxlength="8" required>
+					  </div>
+					  <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+					</form>
+					<div class="alert alert-info" id="resultAlert">
+						<span id="result">Here the message will show</span>
+						<button id="retryBtn" type="buttom" class="btn btn-primary">Try another</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#resultAlert").hide();
+			$("#retryBtn").click(function() {
+				$("#resultAlert").hide().removeClass("alert-warning alert-success").addClass("alert-info");
+				$("#submitBtn").show();
+				$("#couponForm").trigger("reset");	
+			});
+			$("#couponForm").submit(function(e) {
+				e.preventDefault();
+				$("#submitBtn").hide();
+				var couponText = $("#couponCode").val();
+				var data = {
+					coupon: couponText,
+					timestamp: new Date().getTime(),
+				};
+				console.log(data);
+				$.ajax({
+				    url: 'https://us-central1-splendre-adn-poc.cloudfunctions.net/contest_pro/api/hilite/c/verify/',
+				    method: "post",
+				    headers: {
+				        "Auth-Token":"spltok123"
+				    },
+				    dataType: 'json',
+				    data: data,
+				    success: function(jsonResponse, textStatus, jqXHR) {
+				        $('#result').html("Claimed! Coupon is for " + jsonResponse.contest_gift.gift.name);
+				        $("#resultAlert").removeClass("alert-info").addClass("alert-success").show();
+				    },
+				    error: function(jqXHR, textStatus, errorThrown) {
+				        $('#result').html("Sorry, coupon is not valid");
+				        $("#resultAlert").removeClass("alert-info").addClass("alert-warning").show();
+				    }
+				});
+			});
+		});
+		
+	</script>
+</body>
+</html>
