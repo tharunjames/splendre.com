@@ -78,7 +78,7 @@
 				};
 				console.log(data);
 				$.ajax({
-				    url: 'http://35.244.59.17:8888/api/hilite/c/verify/',
+				    url: 'https://us-central1-splendre-adn-poc.cloudfunctions.net/contest_pro/api/hilite/c/verify/',
 				    method: "post",
 				    headers: {
 				        "Auth-Token":"spltok123"
@@ -90,7 +90,7 @@
 				        $("#resultAlert").removeClass("alert-info").addClass("alert-success").show();
 				    },
 				    error: function(jqXHR, textStatus, errorThrown) {
-				        $('#result').html("Sorry, coupon is not valid");
+				        $('#result').html("Sorry, " + jqXHR.responseJSON[0]);
 				        $("#resultAlert").removeClass("alert-info").addClass("alert-warning").show();
 				    }
 				});
